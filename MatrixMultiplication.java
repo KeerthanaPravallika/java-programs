@@ -31,7 +31,7 @@ class multiply
        
     
 }
-class Main
+class MatrixMultiplication
 {
     public static void main(String[] args)
     {
