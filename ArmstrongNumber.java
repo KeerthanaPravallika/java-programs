@@ -1,26 +1,30 @@
 import java.util.Scanner;
-public class ArmstrongNumber
+
+public class arm_num 
 {
-    public static void main(String args[])
+    public static void main(String[] args) 
     {
-        int num,i,tmp,d,sumOfCubes=0;
-        System.out.print("Enter the number : ");
-        Scanner sc = new Scanner(System.in);
-        num = sc.nextInt();
-        tmp = num;
-        while(num!=0)
+        Scanner scan = new Scanner(System.in);
+        int n, sum=0;
+        System.out.print("enter any number : ");
+        n = scan.nextInt();
+
+        int m=n;
+
+        while(n > 0)
         {
-            d = num%10;
-            sumOfCubes = sumOfCubes + (d*d*d);
-            num = num/10;
+            sum += Math.pow(n%10, 3);
+            n /= 10;
         }
-        if(tmp == sumOfCubes)
-            System.out.println("It is a Armstrong Number");
+        if(m == sum)
+        {
+            System.out.println(m+ " is an armstrong number.");
+        }
         else
-            System.out.println("It is not a Armstrong Number");
-       
+        {
+            System.out.println(m+ "is not an armstrong number.");
+        }
+        scan.close();
+
     }
 }
-
-
-
